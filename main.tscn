@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://c8ld12j31qan0"]
+
+[ext_resource type="Script" uid="uid://c33rhuy3vjdii" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://doa11xeoumueh" path="res://city_map.jpg" id="2_0xm2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
+font_size = 45
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+
+[node name="Main" type="Node2D" unique_id=747936871]
+position = Vector2(0, -8)
+scale = Vector2(2, 2)
+script = ExtResource("1_ig7tw")
+
+[node name="MapBackground" type="TextureRect" parent="." unique_id=492751605]
+offset_right = 576.0
+offset_bottom = 328.0
+texture = ExtResource("2_0xm2m")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1269877965]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = 64.0
+offset_right = 368.0
+offset_bottom = 264.0
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=1372935231]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="District1" type="Button" parent="CenterContainer/GridContainer" unique_id=1456391527]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="District2" type="Button" parent="CenterContainer/GridContainer" unique_id=976528999]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="District3" type="Button" parent="CenterContainer/GridContainer" unique_id=419506277]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="District4" type="Button" parent="CenterContainer/GridContainer" unique_id=360553089]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ig7tw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="Title" type="Label" parent="." unique_id=2085039446]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 552.0
+offset_bottom = 71.0
+grow_horizontal = 2
+text = "QUANTUM METROPOLIS"
+label_settings = SubResource("LabelSettings_ig7tw")
+
+[node name="StatusText" type="Label" parent="." unique_id=1672018090]
+offset_left = 4.0
+offset_top = 257.0
+offset_right = 576.0
+offset_bottom = 332.0
+theme_override_font_sizes/font_size = 15
+text = "STATUS: City districts are in quantum superposition.
+Click to perform an Audit!
+"
+label_settings = SubResource("LabelSettings_0xm2m")
+vertical_alignment = 2
